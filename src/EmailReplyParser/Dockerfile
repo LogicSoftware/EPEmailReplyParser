@@ -8,6 +8,7 @@ ARG nugetserver=https://myserver.example.com
 WORKDIR /src
 
 COPY EmailReplyParser/$projname.csproj $projname/
+COPY EmailReplyParser/EmailReplyParser.nuspec $projname/
 #COPY NuGet.config .
 
 RUN dotnet restore $projname/$projname.csproj
